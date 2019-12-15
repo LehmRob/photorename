@@ -11,8 +11,8 @@ def run():
     parser.add_argument('-n', '--name', dest='name', default='pic', 
         help='base name for pictures; the filename is extended with a number (e.g. pic-001.png)')
     parser.add_argument('-o', '--output', dest='output', default='.',
-        help='output directory for the sorted pictures, if not used default 
-        is the current directory')
+        help="""output directory for the sorted pictures, if not used default is the current 
+        directory""")
 
     args = parser.parse_args()
 
