@@ -13,7 +13,7 @@ setup(
     scripts=['photorename.py'],
     install_requires=[
         'exif',
-    ]
+    ],
     test_suite='nose.collector',
     tests_require=['nose'],
 )
