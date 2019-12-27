@@ -10,7 +10,9 @@ setup(
     author_email='lehmrob@posteo.net',
     url='https://github.com/lehmrob',
     packages=['photorename'],
-    scripts=['photorename.py'],
+    entry_points = {
+        'console_scripts': ['phore=photorename.cli:main'],
+    },
     install_requires=[
         'exif',
     ],
