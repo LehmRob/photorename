@@ -2,11 +2,14 @@ import argparse
 import sys
 from pathlib import Path
 from .photorename import Renamer
+from .version import __version__
+
+version = "1.0.0"
 
 def main():
     parser = argparse.ArgumentParser(
         description='Bulk rename pictures in a directory')
-    parser.add_argument('directory', metavar='dir', 
+    parser.add_argument('directory', metavar='dir', default='.',
         help='directory with the fotos which should be ordered')
     parser.add_argument('-n', '--name', dest='name', default='pic', 
         help='base name for pictures; the filename is extended with a number (e.g. pic-001.png)')
@@ -19,7 +22,7 @@ def main():
     args = parser.parse_args()
 
     if args.version:
-        print(f"{version}")
+        print(f"{__version__}")
         sys.exit(0)
 
     renamer = Renamer(args.directory, args.name, args.output)
